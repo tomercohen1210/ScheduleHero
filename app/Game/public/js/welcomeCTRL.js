@@ -59,9 +59,10 @@
 
         function getEvent() {
             var name = document.getElementById("event");
-            var event= getCookie("event");
-            if(event==undefined) {
-                name.innerHTML = "NONE EVENT"
+            var event= getCookie("event1");
+            if(event=="") {
+                name.innerHTML = "EVENT: None event";
+                document.cookie='event=None event';
             }
             else{
                 name.innerHTML='EVENT: '+event;
