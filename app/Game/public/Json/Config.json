@@ -1,0 +1,23 @@
+{
+  "Country":["USA","Germany"],
+  "USA":{
+    "Center":{
+      "lat":34.050193,
+      "lng":-118.244852
+    },
+    "Language":"English",
+    "Tasks":"USATasks",
+    "Engineers":"USAEngineers",
+    "Data":"USAData"
+  },
+  "Germany":{
+    "Center":{
+      "lat":34.050193,
+      "lng":-118.244852
+    },
+    "Language":"German",
+    "Tasks":"USATasks",
+    "Engineers":"USAEngineers",
+    "Data":"USAData"
+  }
+}

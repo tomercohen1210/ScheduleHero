@@ -1,0 +1,18 @@
+{
+  "task":[
+    {"name":"t1","lat":34.085677,"lng":-118.268530,"time":1,"skill":"blue"},
+    {"name":"t2","lat":34.038954,"lng":-118.277280,"time":1,"skill":"green","dep":"A"},
+    {"name":"t3","lat":34.043076,"lng":-118.221926,"time":1,"skill":"red"},
+    {"name":"t4","lat":34.060880,"lng":-118.206375,"time":2,"skill":"red"},
+    {"name":"t5","lat":34.069688,"lng":-118.221194,"time":1,"skill":"yellow"},
+    {"name":"t6","lat":34.059594,"lng":-118.328096,"time":2,"skill":"green"},
+    {"name":"t7","lat":34.050730,"lng":-118.328029,"time":1,"skill":"purple"},
+    {"name":"t8","lat":34.039943,"lng":-118.322581,"time":2,"skill":"green","dep":"C"},
+    {"name":"t9","lat":34.017519,"lng":-118.241537,"time":1,"skill":"purple","dep":"B"},
+    {"name":"t10","lat":34.023186,"lng":-118.287281,"time":2,"skill":"red","dep":"A"},
+    {"name":"t11","lat":34.030105,"lng":-118.265490,"time":2,"skill":"yellow"},
+    {"name":"t13","lat":34.060006,"lng":-118.178472,"time":2,"skill":"green"},
+    {"name":"t14","lat":34.090780,"lng":-118.317925,"time":1,"skill":"red","dep":"C"}
+
+  ]
+}

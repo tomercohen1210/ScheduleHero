@@ -1,0 +1,60 @@
+<div style="height: 100%;width: 100%" ng-init="init()">
+
+<div class="leftwrap">
+    <div class="left">
+        <div id="gantt" class="wrapper2">
+            <div id="dp"></div>
+        </div>
+        <div id="map" class="wrapper3"></div>
+    </div>
+
+    <div class="right">
+        <div class="boxses">
+        <div class="box">
+            <h2>Rules</h2>
+            <p>
+                <img src="images/v.png" style="height: 25px">
+                Don't schedule after 7PM</p>
+            <P>
+                <img src="images/v.png" style="height: 25px">
+                Skills are next to the engineer name represented bu colors. he can only preform task that match hes skill</P>
+            <p>
+                <img src="images/v.png" style="height: 25px">
+                Enforce sequential time dependencies for tasks</p>
+            <div style="height: 60px;width: 100%;display: flex;justify-content: space-around;">
+                <div class="depen " style="background-color: #FF887D">A</div>
+                <div class="arrow"></div>
+                <div class="depen" style="background-color: #4EDDA1">A</div>
+            </div>
+
+            <div style="height: 60px;width: 100%;display: flex;justify-content: space-around;">
+                <div class="depen " style="background-color: #B677D0">B</div>
+                <div class="arrow"></div>
+                <div class="depen" style="background-color: #FF9E00">B</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Objectives</h2>
+            <p>
+                <img src="images/v.png" style="height: 25px">
+                Minimize travel time</p>
+            <p>
+                <img src="images/v.png" style="height: 25px">
+                Minimize over time <br>(5 pm - 7 pm)</p>
+        </div>
+        </div>
+
+      <div class="buttons">
+
+        <img src="images/clock.png" style="max-width: 150px">
+
+          <p>{{clock}}</p>
+            <input id="GameB1" type="submit" value="Reset" class="button" style="background-color: #7C7C7C" ng-click="reset()">
+            <input id="GameB2" type="submit" value="Submit" class="button"  ng-click="finish()">
+
+      </div>
+    </div>
+</div>
+</div>
+<audio id="audio" src="audio/Tick.mp3" ></audio>

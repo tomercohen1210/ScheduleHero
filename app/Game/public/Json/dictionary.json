@@ -1,0 +1,82 @@
+{
+"GameH1":{
+  "English":"Rules",
+  "German":"Regeln"
+},
+  "GameP1":{
+    "English":"Work day must be over by 19:00",
+    "German":"Fahren Sie nach 19:00 nicht ein"
+  },
+  "GameP2":{
+    "English":"Task can be completed only by engineer with suitable skills",
+    "German":"Fähigkeiten sind neben dem Ingenieur Namen durch Farben dargestellt. Er kann nur vorbereiten Aufgabe, dass Match ist Geschick"
+  },
+  "GameP3":{
+    "English":"Dependencies with the same letter must be ordered as follows",
+    "German":"Erzwingen Sie sequentielle Zeitabhängigkeiten für Aufgaben"
+  },
+  "GameH2":{
+    "English":"Objectives",
+    "German":"Ziele"
+  },
+  "GameP4":{
+    "English":"Minimize travel time",
+    "German":"Reisezeit minimieren"
+  },
+  "GameP5":{
+    "English":"Minimize over time (17:00-19:00)",
+    "German":"Minimierung über die Zeit (17:00-19: 00)"
+  },
+  "GameB1":{
+    "English":"Reset",
+    "German":"Reset"
+  },
+  "GameB2":{
+    "English":"Submit",
+    "German":"Einreichen"
+  },
+  "ResultH1":{
+    "English":"Rule Violation",
+    "German":"Regelverletzung"
+  },
+  "ResultP1":{
+    "English":"Non Working Hours Violation: ",
+    "German":"Nicht arbeitszeitverletzung:  "
+  },
+  "ResultP2":{
+    "English":"Dependency Violation: ",
+    "German":"Abhängigkeitsverletzung: "
+  },
+  "ResultP3":{
+    "English":"Skill Violation: ",
+    "German":"Skillverletzung: "
+  },
+  "ResultP31":{
+  "English":"Open Tasks: ",
+  "German":"Offene Aufgaben: "
+  },
+  "ResultH2":{
+    "English":"Your KPI's",
+    "German":"Ziele"
+  },
+  "ResultP4":{
+    "English":"Total Travel Time: ",
+    "German":"Gesamtfahrzeit: "
+  },
+  "ResultP5":{
+    "English":"Total Distance (KM): ",
+    "German":"Gesamtstrecke (KM): "
+  },
+  "ResultP6":{
+    "English":"Total Overtime (Hours): ",
+    "German":"Überstunden (Zeit): "
+  },
+  "ResultP7":{
+    "English":"Cost: ",
+    "German":"Kosten:"
+  },
+  "ResultH3":{
+    "English":"ClickSoftware Optimal KPI's",
+    "German":"ClickSoftware"
+  }
+}

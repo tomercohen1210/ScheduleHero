@@ -1,0 +1,236 @@
+<div style="height: 100%;width: 100%;display: flex;flex-direction: row" ng-init="init()">
+
+
+    <div class="result_left">
+        <div class="up">
+
+            <div style="width: 100%;height:100%;position:absolute;bottom: 0;left: 0; display: flex;flex-direction: row;justify-content: flex-start;box-sizing: border-box;padding-left:5%">
+                <div class="graph" style="padding-left: 10px">
+                    <canvas id="myChart1"></canvas>
+
+                    <img src="images/ruleIcon.png">
+                    <p>Rule Violation</p>
+                </div>
+                <div class="graph" style="padding-left: 10px">
+                    <canvas id="myChart2"></canvas>
+                    <img src="images/travelIcon.png">
+                    <p> Travel Time (Hr)</p>
+
+                </div>
+                <div class="graph" style="padding-left: 10px">
+                    <canvas id="myChart3"></canvas>
+                    <img src="images/distanceIcon.png" style="padding-top: 3px">
+                    <p> Distance (Km)</p>
+                </div>
+                <div class="graph">
+                    <canvas id="myChart4"></canvas>
+                    <img src="images/overIcon.png" style="padding-top: 3px">
+                    <p> Over Time (Hr)</p>
+                </div>
+                <div class="graph">
+                    <canvas id="myChart5"></canvas>
+                    <div>
+                        <img src="images/timeIcon.png" style="padding-top: 3px">
+                        <p> Time (Min)</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="down">
+
+            <div class="gantt_score">
+                <div class="gantt_image" style="background-color:#1DCB7E ">
+                    <img src="images/you.png">
+                    <p>User</p>
+                    <p>Gantt</p>
+                </div>
+                <div style="height:100%;width: 85%">
+                    <div id="dp1"></div>
+                </div>
+            </div>
+
+            <div class="gantt_score">
+                <div class="gantt_image" style="background-color:#0A77BF ">
+                    <img src="images/click.png">
+                    <p>Click</p>
+                    <p>Gantt</p>
+                </div>
+                <div style="height:100%;width: 85%">
+                    <div id="dp2"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <div class="result_right">
+
+
+        <div class="final_score">
+            <button type="button" class="leader_button" data-toggle="modal" data-target="#leaderModal"
+                    style="text-align: center">Leaderboard
+                <img src="images/trophy.png" style="height: 40px;width: 40px;">
+            </button>
+            <div class="scores" style="">
+                <div style="display: flex;flex-direction:column ">
+                    <h3 style="color: #556080">100</h3>
+                    <p>ClickSoftware</p>
+                </div>
+
+                <div style="display: flex;flex-direction:column;padding-right:35px;align-self: center">
+                    <p>final</p>
+                </div>
+
+                <div style="display: flex;flex-direction:column ">
+                    <h3 style="color: #989FB2">{{score}}</h3>
+                    <p>User</p>
+                </div>
+            </div>
+        </div>
+
+
+        <img src="images/save.png" style="max-width: 95%;margin-top: 100px;margin-right: 40px">
+
+        <p style="align-self: center;font-size: 60px;margin-top: -6%;color: #93D6D1;margin-right: 45px">
+            {{moneysave}}$</p>
+
+        <button type="button" class="leader_button"
+                style="background-color: #0A77BF;width: 60%;align-self: center;padding-right: 50px" data-toggle="modal"
+                data-target="#learnModal">Learn more
+        </button>
+
+        <img src="images/increase.png">
+
+    </div>
+
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="leaderModal" role="dialog">
+    <div class="modal-dialog" style="width: 60%">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <img src="images/leader.png" style="margin-left: 28%">
+            </div>
+            <div class="modal-body" style="display: flex;flex-direction: column">
+                <div style="display: flex;justify-content: center; padding-bottom: 10px">
+                    <button type="button" class="event_button" ng-class="{focused: isFocused}"
+                            ng-click="isFocused = !isFocused">Today
+                    </button>
+                    <button type="button" class="event_button" ng-class="{focused: !isFocused}"
+                            ng-click="isFocused = !isFocused">All time
+                    </button>
+                </div>
+                <div ng-switch="isFocused">
+                    <div ng-switch-when="true" style="display: flex;justify-content: center;">
+                        <table class="scoretable">
+                            <tr ng-repeat="x in scores">
+                                <td style="width: 70px">
+                                    <div style="border-radius:50%;background-color: #EBF7F6;text-align: center;color: #FFD15C;margin: 0px 19px 0px 3px;
+                                border: 1px solid #FFD15C">{{$index+1}}
+                                    </div>
+                                </td>
+                                <td>{{x.name}}</td>
+                                <td>{{x.company}}</td>
+                                <td style="text-align: right">{{x.score}}</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div ng-switch-when="false" style="display: flex;justify-content: center;">
+                        <table class="scoretable">
+                            <tr ng-repeat="x in topscores">
+                                <td style="width: 70px">
+                                    <div style="border-radius:50%;background-color: #EBF7F6;text-align: center;color: #FFD15C;margin: 0px 19px 0px 3px;
+                                border: 1px solid #FFD15C">{{$index+1}}
+                                    </div>
+                                </td>
+                                <td>{{x.name}}</td>
+                                <td>{{x.company}}</td>
+                                <td style="text-align: right">{{x.score}}</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="modal fade" id="learnModal" role="dialog">
+    <div class="modal-dialog" style="width: 80%">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+
+            </div>
+            <div class="modal-body" style="display: flex;flex-direction: column;align-content: center">
+
+                <div style="display: flex;flex-direction: row;justify-content: space-around;">
+                    <div style="display: flex;flex-direction: column;position: relative">
+                        <img src="images/score1.png">
+                        <img src="images/yellow.png" style="width: 75%;align-self: center;padding-top: 3px">
+                        <h3 style="position: absolute;  top:320px ;left: 115px;color: #FFFFFF;font-size: 38px ">{{savetravel}}$</h3>
+                    </div>
+                    <div style="display: flex;flex-direction: column;position: relative">
+                        <img src="images/score2.png">
+                        <img src="images/blue.png" style="width: 75%;align-self: center">
+                        <h3 style="position: absolute;  top:320px ;left: 115px;color: #FFFFFF;font-size: 38px  ">{{savehours}}$</h3>
+                    </div>
+                    <div style="display: flex;flex-direction: column;position: relative">
+                        <img src="images/score3.png">
+                        <img src="images/red.png" style="width: 75%;align-self: center;padding-top: 10px">
+                        <h3 style="position: absolute;   top:320px ;left: 115px;color: #FFFFFF;font-size: 38px ">{{savetasks}}$</h3>
+                    </div>
+
+
+                </div>
+
+                <div class="scoredetail">
+                    <img src="images/trophy.png" style="height: 80px;width: 80px;padding-left: 10px">
+
+                    <div style="display: flex;align-items: center;flex-direction: column;justify-content: center;">
+                        <p style="color: #0A77BF;font-size: 45px;margin: 0">SUM {{moneysave}}$</p>
+                        <P style="color: #989FB2;font-size: 25px">assuming 100 resources per year!</P>
+                    </div>
+                    <img src="images/trophy.png" style="height: 80px;width: 80px;padding-right: 10px">
+                </div>
+
+                <div style="display: flex;align-self: center;padding-top: 20px">
+                    <a href="" target="_blank">
+                    <img src="images/roi.png">
+                    </a>
+                    <a href="http://www.fieldservicematters.com/" target="_blank">
+                    <img src="images/blog.png">
+                    </a>
+                    <a href="https://www.clicksoftware.com/customers/" target="_blank">
+                    <img src="images/cases.png">
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>

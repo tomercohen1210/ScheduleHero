@@ -1,0 +1,84 @@
+<div style="height: 100%;min-height: 800px;min-width: 1750px;  display: flex;justify-content:center; flex-direction: column"
+     ng-init="init()">
+
+    <div class="welcome_up">
+
+        <div style="width: 50%;display: flex;justify-content: flex-start;flex-direction: column; box-sizing: border-box;min-width: 620px">
+            <div style="display: flex; border-bottom: 1px solid #FFFFFF; width: 70%">
+                <p id="event" style="font-size: 30px">Event: </p>
+                <input type="image" src="images/Settings.png" alt="Submit" ng-click="changeEvent()" style="margin-left: auto;height: 30px">
+            </div>
+            <div>
+            <p style="font-size: 40px">To start the game please <br> provide some quick information:</p>
+            </div>
+            <div style="display: flex;height: 70%;justify-content: space-between;width: 70%">
+            <div style="display: flex;justify-content: space-around;flex-direction: column">
+                <input type="text" class="infoFed" ng-model="firstname"
+                       onblur="if (this.value == '') {this.value = 'FIRST NAME';}"
+                       onfocus="if (this.value == 'FIRST NAME') {this.value = '';}">
+
+                <input type="text" class="infoFed"  ng-model="jobtitle"
+                       onblur="if (this.value == '') {this.value = 'JOB TITLE';}"
+                       onfocus="if (this.value == 'JOB TITLE') {this.value = '';}">
+
+                <input type="text"  class="infoFed"  ng-model="email"
+                       onblur="if (this.value == '') {this.value = 'EMAIL';}"
+                       onfocus="if (this.value == 'EMAIL') {this.value = '';}">
+
+            <select id="ddl" ng-model="selectedcountry" class="button2"
+                    style="bottom:10%;left:0;align-self:center;background-color:#7C7C7C"
+                    ng-options="item for item in country">
+                <option value="">Country</option>
+            </select>
+
+            </div>
+            <div style="display: flex;justify-content: space-around;flex-direction: column">
+                <input type="text" class="infoFed"  ng-model="lastname"
+                       onblur="if (this.value == '') {this.value = 'LAST NAME';}"
+                       onfocus="if (this.value == 'LAST NAME') {this.value = '';}">
+
+                <input type="text"  class="infoFed"  ng-model="company"
+                       onblur="if (this.value == '') {this.value = 'COMPANY';}"
+                       onfocus="if (this.value == 'COMPANY') {this.value = '';}">
+
+                <input type="text" class="infoFed"  ng-model="phone"
+                       onblur="if (this.value == '') {this.value = 'PHONE';}"
+                       onfocus="if (this.value == 'PHONE') {this.value = '';}">
+
+                <select  ng-model="selecteddiff" class="button2"
+                        style="bottom:10%;left:0;align-self:center;background-color:#7C7C7C;">
+                    <option value="">Difficulty</option>
+                    <option>1</option>
+                </select>
+            </div>
+        </div>
+            <div>
+                <input id="checkbox7" class="styled" type="checkbox" ng-model="check">
+                <label for="checkbox7" style="color: #FFFFFF;font-size: 30px;">
+                   I Approve ClickSoftware to use my information
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="welcome_down">
+        <div style="position: relative;margin-left: 5%">
+        <img src="images/hero.png" style="position: absolute;bottom:35px;">
+        </div>
+
+
+
+
+
+        <div style="display: flex; position: relative;margin-right: 7%" >
+            <img src="images/instructions.png" height="150" style="position: absolute;top:-122px;left:4%">
+            <img src="images/video.png" height="150" style="padding-top: 10px">
+        </div>
+
+        <div style="display: flex; position: relative" >
+            <input type="image" src="images/play!.png" alt="Submit" ng-click="start()" style="height: 200px;margin-right: 350px">
+
+        </div>
+    </div>
+</div>
+
