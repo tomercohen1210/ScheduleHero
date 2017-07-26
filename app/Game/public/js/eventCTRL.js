@@ -24,11 +24,11 @@
 
         $scope.submit=function () {
             if($scope.selectedevent!=undefined) {
-                document.cookie = 'event=' + $scope.selectedevent + ";expires=" + new Date().getTime() + 3 * 60 * 1000;
+                document.cookie = 'event=' + $scope.selectedevent + ";expires=" + new Date().getTime() + 24 * 60 * 1000;
                 $location.path("/");
             }
             else{
-                document.cookie = 'event=None event;expires=' + new Date().getTime() + 3 * 60 * 1000;
+                document.cookie = 'event=None event;expires=' + new Date().getTime() + 24 * 60 * 1000;
                 $location.path("/");
             }
 

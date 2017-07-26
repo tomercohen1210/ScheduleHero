@@ -10,11 +10,11 @@
         var resevents;
         $scope.isFocused = true;
 
-
-        var img =document.createElement('img');
-        img.src = "images/clicksoftware-logo%20copy.png";
         var img2=document.createElement('img');
         img2.src ="images/your.png";
+
+        var img =document.createElement('img');
+        img.src = "images/clicksoftware-logo.png";
 
         $scope.init = function () {
 
@@ -458,7 +458,7 @@
         }
 
         Chart.plugins.register({
-            afterDatasetsDraw: function(chart, easing) {
+            afterDraw: function(chart, easing) {
                 // To only draw at the end of animation, check for easing === 1
                 var ctx = chart.ctx;
                 chart.data.datasets.forEach(function (dataset, i) {
@@ -483,7 +483,7 @@
 
                             if(index%2==0) {
 
-                                ctx.drawImage(img, position.x-18, position.y - (fontSize / 2) - padding-30);
+                                ctx.drawImage(img, position.x-14, position.y - (fontSize / 2) - padding-17);
                             }
                             else{
 
